@@ -1,4 +1,12 @@
 .panel.panel-default
     .panel-heading Presets
     .panel-body
-        .btn.btn-lg(ng-click="onPresetSelect()") Test
+        .form-horizontal
+            .form-group-lg
+                select.form-control(ng-model="selectedPreset")
+                    option(value="0") Larson Scanner
+                    option(value="1") Larson Rainbow
+                    option(value="2") Rainbow
+                    option(value="3") Rainbow Cycle
+                input(type="text", ng-model="selectedFps")
+                .btn.btn-lg.btn-default(ng-click="onPresetSelect()") Select

@@ -9,8 +9,10 @@ define([
             oscService.registerCallback(function (msg) {
                 console.log('preset cb msg', msg);
             });
+            $scope.selectedPreset = null;
+            $scope.selectedFps = 50;
             $scope.onPresetSelect = function () {
-                oscService.sendMessage('/presets', [1, 50]);
+                oscService.sendMessage('/presets', [parseInt($scope.selectedPreset), parseInt($scope.selectedFps)]);
             };
         }]);
 });
