@@ -5,7 +5,7 @@ define(['angular'], function () {
     return angular.module('woc.services.osc', []).
         factory('oscService', function () {
             var port = new osc.WebSocketPort({
-                url: "ws://localhost:8081"
+                url: "ws://" + location.host + ":8081"
             });
             port.open();
             return {

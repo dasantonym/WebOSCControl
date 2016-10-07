@@ -3,10 +3,16 @@
     .panel-body
         .form-horizontal
             .form-group-lg
-                select.form-control(ng-model="selectedPreset")
-                    option(value="0") Larson Scanner
-                    option(value="1") Larson Rainbow
-                    option(value="2") Rainbow
-                    option(value="3") Rainbow Cycle
-                input(type="text", ng-model="selectedFps")
-                .btn.btn-lg.btn-default(ng-click="onPresetSelect()") Select
+                .row
+                    .col-sm-6
+                        select.form-control(ng-model="selectedPreset")
+                            option(value="0") Larson Scanner
+                            option(value="1") Larson Rainbow
+                            option(value="2") Rainbow
+                            option(value="3") PartyMode
+                            option(value="4") FireFlies
+                            option(value="5") WhiteTwinkle
+                            option(value="6") Wave
+                            option(value="7") ColorChase
+                    input.col-sm-3.input-lg(type="text", ng-model="selectedFps")
+                    .btn.btn-lg.btn-default.col-sm-3(ng-click="onPresetSelect()") Select
