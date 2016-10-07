@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
-app.use('/favicon.ico', function(req, res) { res.send(404); });
+app.use('/favicon.ico', function(req, res) { res.sendStatus(404); });
 app.use('/partials/:partial', function(req, res) { res.render('partials/' + req.params.partial); });
 app.use('/', function(req, res) { res.render('index'); });
 
